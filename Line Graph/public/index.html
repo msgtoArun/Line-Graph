@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="./images/ms-icon-310x310.png" width="50" height="50" />
+    <!-- drag library -->
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <!-- end -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>Line Graph</title>
+  </head>
+  <body>
+    <section class="graph-section">
+      <div id="snackbar">Provide All Fields</div>
+      <div class="form-div">
+        <p>Eqaution of a line is</p>
+        <p>y = mx + c</p>
+        <form>
+          <div class="form-inputs">
+            <label>m = </label>
+            <input
+              onkeypress="return isNumber(event)"
+              type="text"
+              name="slope"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-inputs">
+            <label>c = </label>
+            <input
+              onkeypress="return isNumber(event)"
+              type="text"
+              name="constant"
+              autocomplete="off"
+            />
+          </div>
+          <button>PLOT</button>
+        </form>
+      </div>
+      <div class="graph-div" ondrag="Ondragging(event)" ondragleave="onDragLeave(event)" id = "draggable" draggable="true">
+        <div
+          class="ui-widget-content"
+          id="chartContainer"
+          draggable="true"
+          style="height: 300px; width: 300px;"
+        ></div>
+      </div>
+    </section>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $("#draggable").draggable();
+      });
+    </script>
+    <script src="./JS/index.js"></script>
+    <script src="./JS/main.js"></script>
+  </body>
+</html>

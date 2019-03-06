@@ -1,0 +1,282 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    user-select: auto;  
+}
+
+.graph-section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-div p {
+    margin: 20px 0;
+}
+
+.form-inputs {
+    margin: 20px 0;
+}
+
+.form-inputs input {
+    width: 50px;
+    border: 2px solid #868686;
+    border-radius: 4px;
+    outline: none;
+    font-family: inherit;
+    padding: 3px 8px;
+}
+
+.form-inputs label {
+    display: inline-block;
+    width: 30px;
+    text-align: right;
+}
+
+button {
+    font-family: inherit;
+    color: #868686;
+    border: 2px solid #868686;
+    border-radius: 4px;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #888888;
+    color: white;
+}
+
+.graph-div {
+    width: 300px;
+    height: 300px;
+    background: #cfe2f3;
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.form-div {
+    margin: 0 60px;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+[draggable=true] {
+    cursor: move;
+}
+
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+.canvasjs-chart-credit {
+    display: none;
+}
+
+canvas,.canvasjs-chart-container,.canvasjs-chart-canvas,.canvasjs-chart-canvas  {
+    user-select: auto !important;
+    pointer-events: all !important;
+    cursor: move !important;
+}
+
+.add-border {
+    border: 2px dashed #778a9b;
+}
